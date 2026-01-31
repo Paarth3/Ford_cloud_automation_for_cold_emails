@@ -1,4 +1,4 @@
-# Serverless Personalized Marketing Engine
+# Serverless Personalised Marketing Engine
 
 A cloud-native application that automates the generation of personalised marketing emails. This system leverages an event-driven architecture on AWS to detect new customer entries and immediately generate tailored email content using Generative AI (Meta Llama 3 via AWS Bedrock).
 
@@ -6,7 +6,20 @@ A cloud-native application that automates the generation of personalised marketi
 
 In traditional marketing, generic email blasts often result in low engagement and high unsubscribe rates. This project solves that problem by automating the creation of 'cold emails' that are specifically contextualised to an individual's unique interests.
 
-**How it works:**
+> 💡 **Sample Email**
+> 
+> Hi Paarth,
+> 
+> I came across your name while researching outdoor enthusiasts, and I was impressed to see your passion for photography and trekking. I'm guessing you're always on the lookout for the perfect adventure, and I think I might have just the vehicle for you.
+> 
+> As someone who appreciates the great outdoors, I'm sure you're no stranger to the thrill of navigating rugged terrain. That's why I'd like to introduce you to the Ford Bronco, designed to tackle even the toughest trails. With its rugged 4x4 capability and commanding presence, the Bronco is perfect for capturing those stunning mountain vistas or trekking through the wilderness. Plus, its advanced technology and advanced safety features will give you peace of mind, so you can focus on taking in the breathtaking views.
+> 
+> I'd love to tell you more about how the Ford Bronco can help you conquer your next adventure. Would you be open to a quick call to discuss?
+> 
+> Best,  
+> Ford Motors
+
+## How it works:
 1.  **Ingestion:** A new customer profile is added to the database via a client script.
 2.  **Trigger:** The database update automatically triggers a background Lambda function via DynamoDB Streams.
 3.  **Analysis:** A Large Language Model (LLM) analyzes the customer's demographics and interests.
