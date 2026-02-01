@@ -1,4 +1,4 @@
-# Serverless Personalised Marketing Engine
+# Cloud-based Personalised Marketing Engine
 
 A cloud-native application that automates the generation of personalised marketing emails. This system leverages an event-driven architecture on AWS to detect new customer entries and immediately generate tailored email content using Generative AI (Meta Llama 3 via AWS Bedrock).
 
